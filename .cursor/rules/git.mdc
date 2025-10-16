@@ -1,14 +1,24 @@
 ---
-description: any changes to any file in repo
-alwaysApply: false
+alwaysApply: true
 ---
 {
   "github_account": "koltanl",
+  "remote_setup": {
+    "ssh_url": "git@github-personal.com:koltanl/localMachine",
+    "ssh_host_alias": "github-personal.com",
+    "auth_preference": "SSH only - never use HTTPS, always convert remote to SSH format",
+    "ssh_config": "~/.ssh/config contains github-personal.com host alias for koltanl account"
+  },
   "ssh_key_workflow": {
     "check_existing": "always check SSH key stockpile before adding new keys",
     "generate_if_missing": "if no key exists, generate new SSH key and instruct user to add to GitHub account",
     "key_management": "use existing keys when available, avoid key duplication"
   },
+  "pre_push_checklist": [
+    "verify remote URL uses SSH format (git@github-personal.com:koltanl/localMachine)",
+    "confirm SSH config has correct host alias",
+    "test SSH connection if authentication issues occur"
+  ],
   "commit_freedom": {
     "personal_account": "this is entirely a personal account - feel free to commit, add, and push as desired",
     "no_restrictions": "no need to ask permission for git operations on this repo",
