@@ -1,0 +1,14 @@
+{
+  "github_account": "koltanl",
+  "ssh_key_workflow": {
+    "check_existing": "always check SSH key stockpile before adding new keys",
+    "generate_if_missing": "if no key exists, generate new SSH key and instruct user to add to GitHub account",
+    "key_management": "use existing keys when available, avoid key duplication"
+  },
+  "commit_freedom": {
+    "personal_account": "this is entirely a personal account - feel free to commit, add, and push as desired",
+    "no_restrictions": "no need to ask permission for git operations on this repo",
+    "autonomous_workflow": "make changes, commit with meaningful messages, push when ready"
+  },
+  "context": "local Arch Linux environment, personal HOMESERVER debugging workspace, full git autonomy"
+}
